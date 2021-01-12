@@ -1,0 +1,10 @@
+body {
+    background-image: url("../img/背景画像.jpg");
+}
+
+.container {
+    max-width: 1000px;
+}
+h1 {
+    text-align: center;
+}

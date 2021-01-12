@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% load static %}
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="{% static 'discrimination/css/style.css' %}">
+    <title>犬猫判別サイト</title>
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
