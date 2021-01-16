@@ -1,14 +1,15 @@
 {% extends 'discrimination/base.html' %}
 {% block content %}
 <h1>犬猫判別サイト</h1>
-<form>
+<form method="post" action="/discrimination/result/">
+    {% csrf_token %}
     <div class="form-group">
         <div class="custom-file">
             <input type="file" class="custom-file-input" id="inputFile">
             <label class="custom-file-label" for="inputFile" data-browse="参照">ファイルを選択してください(ドロップ可)</label>
         </div>
     </div>
-    <button type="button" class="btn btn-primary" onclick="location.href='http://127.0.0.1:8000/discrimination/result/'">判定</button>
+    <button type="submit" class="btn btn-primary">判定</button>
     <button type="reset" class="btn btn-secondary">キャンセル</button>
 </form>
 <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js"></script>
