@@ -1,11 +1,16 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.template import loader
+from django.urls import reverse
+from django.views.generic import TemplateView, FormView
+from . import forms
 
 
-def index(request):
-    return render(request, 'discrimination/index.html')
+class IndexView(TemplateView):
+    template_name = "discrimination/index.html"
 
 
-def result(request):
-    return render(request, 'discrimination/result.html')
+class ResultView(FormView):
+    # def post():
+    template_name = "discrimination/result.html"
+    form_class = forms.DiscriminationForm
+    success_url = "discrimination/result.html"
