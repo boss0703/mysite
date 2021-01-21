@@ -1,11 +1,11 @@
 {% extends 'discrimination/base.html' %}
 {% block content %}
 <h1>犬猫判別サイト</h1>
-<form method="post" action="/discrimination/result/">
+<form method="post" action="/discrimination/result/" enctype="multipart/form-data">
     {% csrf_token %}
     <div class="form-group">
         <div class="custom-file">
-            <input type="file" class="custom-file-input" id="inputFile">
+            <input type="file" class="custom-file-input" id="inputFile" name="inputFile">
             <label class="custom-file-label" for="inputFile" data-browse="参照">ファイルを選択してください(ドロップ可)</label>
         </div>
     </div>

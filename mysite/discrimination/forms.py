@@ -1,7 +1,9 @@
 from django import forms
 
+from .models import ImageFile
 
-class DiscriminationForm(forms.Form):
-    image = forms.CharField(label="inputFile")
-    print(image)
-    # image = forms.FilePathField()
+
+class DiscriminationForm(forms.ModelForm):
+    class Meta:
+        model = ImageFile
+        fields = ('inputFile', )
