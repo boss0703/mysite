@@ -6,4 +6,4 @@ from .models import ImageFile
 class DiscriminationForm(forms.ModelForm):
     class Meta:
         model = ImageFile
-        fields = ('inputFile', )
+        fields = ('titlefield', 'filefield', )
