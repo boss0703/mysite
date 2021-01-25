@@ -21,5 +21,6 @@ class ResultView(FormView):
         #    logger.debug(self.request.POST.get('inputFile', None), None)
         logging.basicConfig(level=logging.DEBUG)
         logger.debug("-- call post --")
-        logger.debug(self.request.POST.get('inputFile'))
+
+        logger.debug(request.POST.get('inputFile'))
         return self.get(request, *args, **kwargs)

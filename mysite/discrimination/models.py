@@ -7,7 +7,7 @@ class ImageFile(models.Model):
     filefield = models.FileField(
         upload_to='images/',
         verbose_name='attached file',
-        validators=[FileExtensionValidator(['jpg', ])],
+        validators=[FileExtensionValidator(['jpg', 'png', ])],
         null=True
     )
 #    uploaded_at = models.DateTimeField(auto_now_add=True)
